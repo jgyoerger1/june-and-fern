@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script>window.JF_STATIC="/june-and-fern";</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop — June &amp; Fern</title>
+  <meta name="description" content="Every piece in the June & Fern shop: one of a kind cyanotype apparel, vintage clothing and small goods. Sold pieces stay on the wall.">
+  <meta name="theme-color" content="#F3EFE6">
+  <link rel="icon" href="/june-and-fern/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/june-and-fern/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allison&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/june-and-fern/css/base.css">
+  <link rel="stylesheet" href="/june-and-fern/css/site.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script type="module" src="/june-and-fern/js/shop.js"></script>
+</head>
+<body>
+  <div class="announce" data-announce></div>
+  <header class="site-header" id="site-header"></header>
+
+  <main id="main">
+    <div class="wrap">
+      <div class="shop-head">
+        <div>
+          <p class="eyebrow" data-reveal>The shop</p>
+          <h1 data-shop-title data-reveal style="--d:80ms">Everything</h1>
+          <p class="count" data-shop-count data-reveal style="--d:160ms">Loading the wall</p>
+        </div>
+        <p class="lede" data-shop-blurb data-reveal style="--d:200ms">One of a kind pieces, listed a few at a time. Sold pieces stay on the wall because the whole body of work matters.</p>
+      </div>
+
+      <div class="filters" role="group" aria-label="Filter the shop">
+        <button class="chip" data-cat="" aria-pressed="true">All</button>
+        <button class="chip" data-cat="cyanotype" aria-pressed="false">Cyanotype</button>
+        <button class="chip" data-cat="vintage" aria-pressed="false">Vintage</button>
+        <button class="chip" data-cat="goods" aria-pressed="false">Small goods</button>
+        <span class="spacer"></span>
+        <label class="sr-only" for="sort">Sort</label>
+        <select id="sort" data-sort>
+          <option value="new">Newest first</option>
+          <option value="low">Price, low to high</option>
+          <option value="high">Price, high to low</option>
+          <option value="available">Available only</option>
+        </select>
+      </div>
+
+      <div class="shop-banner" data-cancelled hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span>Your bag is right where you left it. Nothing was charged.</span>
+      </div>
+
+      <div class="grid-shop" data-grid aria-live="polite"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+</body>
+</html>

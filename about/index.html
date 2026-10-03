@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script>window.JF_STATIC="/june-and-fern";</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About — June &amp; Fern</title>
+  <meta name="description" content="June & Fern is Beth Yoerger's small studio in Northeast Ohio: cyanotype printing on secondhand clothing, vintage finds, and small goods. Shipping, returns and care details.">
+  <meta name="theme-color" content="#F3EFE6">
+  <link rel="icon" href="/june-and-fern/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/june-and-fern/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allison&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/june-and-fern/css/base.css">
+  <link rel="stylesheet" href="/june-and-fern/css/site.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script type="module">
+    import { initSite } from '/june-and-fern/js/site.js';
+    initSite({ page: 'about' }).then(({ settings }) => {
+      const a = document.querySelector('[data-contact]');
+      if (a && settings.contact_email) { a.textContent = settings.contact_email; a.href = 'mailto:' + settings.contact_email; }
+    });
+    document.querySelectorAll('.acc-btn').forEach((b) => b.addEventListener('click', () => { const it = b.parentElement; const open = it.classList.toggle('is-open'); b.setAttribute('aria-expanded', String(open)); }));
+  </script>
+</head>
+<body>
+  <div class="announce" data-announce></div>
+  <header class="site-header" id="site-header"></header>
+
+  <main id="main">
+    <div class="wrap">
+      <section class="about-hero">
+        <div>
+          <p class="eyebrow" data-reveal>About the studio</p>
+          <h1 data-reveal style="--d:80ms">A kitchen table, a clothesline, and <em class="em-indigo">a lot of sun.</em></h1>
+          <p class="lede" data-reveal style="--d:160ms">June &amp; Fern is Beth Yoerger's one-person studio in Northeast Ohio. Secondhand clothes come in, get coated with an iron-salt solution older than photography as we know it, and go back out into the world carrying the shadow of a plant from the yard.</p>
+          <p class="hand" data-reveal style="--d:240ms">One of a kind goods for a wilder, warmer life.</p>
+        </div>
+        <div class="portrait develop" data-reveal="scale"><img src="/june-and-fern/img/demo/rack.jpg" alt="A rack of cyanotype printed shirts hanging in the studio"></div>
+      </section>
+
+      <div class="two-col" style="margin-top:clamp(3rem,7vw,6rem)">
+        <aside class="about-side">
+          <nav aria-label="On this page" data-reveal>
+            <a href="#story">The story</a>
+            <a href="#process">Why cyanotype</a>
+            <a href="#care">Caring for a print</a>
+            <a href="#shipping">Shipping &amp; returns</a>
+            <a href="#faq">Questions</a>
+          </nav>
+          <div class="mini" data-reveal style="--d:80ms"><h4>Say hello</h4>Custom pieces, wholesale for small shops, or a jacket of yours that wants a fern on it: <a href="mailto:hello@juneandfern.com" style="text-decoration:underline" data-contact>hello@juneandfern.com</a></div>
+        </aside>
+        <div class="prose">
+          <h2 id="story" data-reveal>The story</h2>
+          <div data-reveal-group>
+            <p>The name comes from two things that mark summer in the yard: the first warm week of June, and the ferns that take over the north side of the house. The first prints were on tea towels, then an old chambray shirt that was too good to give away. People kept asking where it came from.</p>
+            <p>Everything is still made by one pair of hands. Garments are thrifted or passed along, washed twice, mended if they need it, then coated and dried in a dark closet. On a clear day they go out on the lawn under glass, with whatever is in season laid on top. Fifteen minutes later they come inside for a long rinse, and the blue appears.</p>
+            <p>The shop is small on purpose. Pieces go up a handful at a time, usually on a Saturday morning. Sold pieces stay on the site because the whole body of work matters more than the inventory.</p>
+          </div>
+
+          <h2 id="process" data-reveal>Why cyanotype</h2>
+          <div data-reveal-group>
+            <p>Cyanotype was invented in 1842 and was how engineers copied drawings for a century, which is where the word blueprint comes from. Anna Atkins used it a year later to make the first book illustrated with photographs: a catalogue of British algae, white on blue.</p>
+            <p>It is also one of the gentlest processes there is. No silver, no darkroom, no solvents. The only chemistry is two iron salts and sunlight, and what rinses out goes down the drain as diluted iron. The blue that remains, Prussian blue, is the same pigment painters have used since the 1700s.</p>
+          </div>
+
+          <h2 id="care" data-reveal>Caring for a print</h2>
+          <ul data-reveal-group>
+            <li>Wash cold, inside out, with a mild soap. No bleach, no oxygen boosters, no phosphate detergents: they will strip the blue.</li>
+            <li>Line dry in the shade. The pigment is lightfast but years of direct noon sun will soften anything.</li>
+            <li>The blue deepens over the first few washes and settles after that. A little unevenness, a halo around a leaf, a brush mark at the edge: that is the print.</li>
+            <li>Iron on low if you must, on the reverse side.</li>
+          </ul>
+
+          <h2 id="shipping" data-reveal>Shipping &amp; returns</h2>
+          <div data-reveal-group>
+            <p>Orders ship from Northeast Ohio within 3 business days, USPS with tracking. Flat rate shipping in the United States, free over $150. You will get an email with the tracking number the moment the parcel is scanned, and you can follow it from the <a href="/june-and-fern/orders/" style="text-decoration:underline">track your order</a> page any time.</p>
+            <p>Because every piece is one of a kind, sales are final. If something arrives damaged or not as described, write within 7 days with a photo and we will make it right, whether that is a repair, a replacement from the next batch, or a refund.</p>
+            <p>International shipping is not open yet. If you are outside the US and in love with something, write and we will work it out by hand.</p>
+          </div>
+
+          <h2 id="faq" data-reveal>Questions</h2>
+          <div class="faq" data-reveal>
+            <div class="acc-item"><button class="acc-btn" type="button" aria-expanded="false">Can you print on something I already own?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button><div class="acc-panel"><div><div class="acc-body"><p>Yes, a few times a season. Natural fibers only, cotton, linen or rayon, light in color. Email a photo and we will talk about what would suit it.</p></div></div></div></div>
+            <div class="acc-item"><button class="acc-btn" type="button" aria-expanded="false">Why do sold pieces stay on the site?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button><div class="acc-panel"><div><div class="acc-body"><p>Because a shop of one-of-a-kind things is also a record. Seeing what came before helps you know what might come next, and it is a nice way to look back.</p></div></div></div></div>
+            <div class="acc-item"><button class="acc-btn" type="button" aria-expanded="false">How do sizes work?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button><div class="acc-panel"><div><div class="acc-body"><p>Every listing has flat measurements in inches taken on that exact garment. Trust the measurements over the tag, especially on vintage.</p></div></div></div></div>
+            <div class="acc-item"><button class="acc-btn" type="button" aria-expanded="false">Do you teach?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button><div class="acc-panel"><div><div class="acc-body"><p>Occasionally, in summer, in the yard. Join the letter at the bottom of the page and you will hear about dates first.</p></div></div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+</body>
+</html>

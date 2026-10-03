@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script>window.JF_STATIC="/june-and-fern";</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Track your order — June &amp; Fern</title>
+  <meta name="description" content="Look up a June & Fern order with your order number and email to see where it is.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#F3EFE6">
+  <link rel="icon" href="/june-and-fern/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/june-and-fern/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allison&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/june-and-fern/css/base.css">
+  <link rel="stylesheet" href="/june-and-fern/css/site.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script type="module" src="/june-and-fern/js/orders.js"></script>
+</head>
+<body>
+  <div class="announce" data-announce></div>
+  <header class="site-header" id="site-header"></header>
+
+  <main id="main">
+    <div class="wrap">
+      <div class="page-head">
+        <p class="eyebrow" data-reveal>Your order</p>
+        <h1 data-reveal style="--d:80ms">Where is my <em class="em-indigo">blue?</em></h1>
+        <p class="lede" data-reveal style="--d:160ms">Enter the order number from your confirmation email and the email you used at checkout.</p>
+      </div>
+      <div class="two-col">
+        <form class="lookup" data-lookup novalidate data-reveal>
+          <div class="field">
+            <label for="number">Order number</label>
+            <input id="number" name="number" class="input" placeholder="JF-7K3Q9" autocomplete="off" spellcheck="false" required>
+            <div class="err">That does not look like one of our order numbers.</div>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" class="input" placeholder="you@somewhere.com" autocomplete="email" required>
+            <div class="err">Please enter the email you used at checkout.</div>
+          </div>
+          <button class="btn btn-indigo" type="submit" data-magnetic>Find my order
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></button>
+          <p class="help muted" style="font-size:.8125rem;margin:0">Lost the email? Write to <a href="mailto:hello@juneandfern.com" style="text-decoration:underline" data-contact>hello@juneandfern.com</a> with your name and we will find it.</p>
+        </form>
+        <div data-result aria-live="polite">
+          <div class="callout" data-reveal style="--d:120ms">Orders are packed within 3 business days and travel USPS with tracking. You will get an email the moment yours ships.</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+</body>
+</html>

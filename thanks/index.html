@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script>window.JF_STATIC="/june-and-fern";</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thank you — June &amp; Fern</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#F3EFE6">
+  <link rel="icon" href="/june-and-fern/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/june-and-fern/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allison&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/june-and-fern/css/base.css">
+  <link rel="stylesheet" href="/june-and-fern/css/site.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script type="module" src="/june-and-fern/js/thanks.js"></script>
+</head>
+<body>
+  <div class="announce" data-announce></div>
+  <header class="site-header" id="site-header"></header>
+
+  <main id="main">
+    <div class="wrap">
+      <div class="thanks-hero">
+        <div>
+          <p class="eyebrow" data-reveal>Order received</p>
+          <h1 data-reveal style="--d:80ms">Thank you. <em class="em-indigo">It is yours.</em></h1>
+          <p class="lede" data-reveal style="--d:160ms" data-thanks-lede>Your piece is being wrapped. You will get an email with tracking the moment it ships, usually within 3 business days.</p>
+          <p class="hand" data-reveal style="--d:240ms" style="color:var(--indigo)">Beth</p>
+          <div data-reveal style="--d:300ms"><a class="btn-text" href="/june-and-fern/shop/"><span class="line">Keep looking</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></a></div>
+        </div>
+        <div class="thanks-print" data-print data-reveal="scale"></div>
+      </div>
+      <div class="narrow" style="margin-top:clamp(3rem,6vw,5rem)" data-order>
+        <div class="order-card"><div class="skel skel-text" style="width:50%;height:1.8rem"></div><div class="skel" style="height:60px"></div><div class="skel" style="height:120px"></div></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+</body>
+</html>
