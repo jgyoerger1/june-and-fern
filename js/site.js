@@ -24,7 +24,7 @@ function headerHTML() {
   return `<div class="header-inner">
     <button class="nav-toggle" data-nav-toggle aria-label="Menu" aria-expanded="false"><span class="hb"><i></i><i></i><i></i></span></button>
     <nav class="nav nav-left" aria-label="Primary">${NAV.slice(0, 4).map(([h, l]) => `<a href="${h}">${l}</a>`).join('')}</nav>
-    <a class="brand" href="/june-and-fern/" aria-label="June and Fern, home"><img class="brand-img" src="/june-and-fern/img/brand/wordmark.png" alt="June &amp; Fern" width="720" height="112"></a>
+    <a class="brand" href="/june-and-fern/" aria-label="June and Fern, home"><img class="brand-img" src="/june-and-fern/img/brand/wordmark.webp" alt="June &amp; Fern" width="1440" height="224"></a>
     <nav class="nav nav-right" aria-label="Secondary">${NAV.slice(4).map(([h, l]) => `<a href="${h}">${l}</a>`).join('')}
       <button class="bag-btn" data-bag-open aria-label="Open your bag">${icon('bag')}<span class="bag-count" data-bag-count>0</span></button>
     </nav>
@@ -45,7 +45,7 @@ function footerHTML(s) {
   const ig = (s.instagram || '@juneandfern').replace(/^@/, '');
   return `<div class="wrap footer-grid">
     <div class="f-brand">
-      <img class="f-badge" src="/june-and-fern/img/brand/badge.png" alt="June &amp; Fern, handmade goods" width="270" height="245" loading="lazy">
+      <img class="f-badge" src="/june-and-fern/img/brand/badge.webp" alt="June &amp; Fern, handmade goods" width="1080" height="976" loading="lazy">
       <p class="hand">One of a kind goods for a wilder, warmer life.</p>
     </div>
     <div class="f-col"><h4>Shop</h4><a href="/june-and-fern/shop/">Everything</a><a href="/june-and-fern/shop/?c=cyanotype">Cyanotype apparel</a><a href="/june-and-fern/shop/?c=vintage">Vintage</a><a href="/june-and-fern/shop/?c=goods">Small goods</a></div>

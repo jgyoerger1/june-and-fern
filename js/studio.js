@@ -26,7 +26,7 @@ function renderLogin(msg = '') {
   const art = scene({ seed: 19, width: 800, height: 1000, texture: true, plants: [{ type: 'fern', x: 360, y: 930, scale: 2.2, rot: -6 }, { type: 'umbel', x: 580, y: 950, scale: 1.7, rot: 8 }], border: 0 });
   app.innerHTML = `<div class="s-login">
     <form class="s-login-form" data-login>
-      <img class="lockup" src="/june-and-fern/img/brand/lockup-light.png" alt="June &amp; Fern" width="740" height="450">
+      <img class="lockup" src="/june-and-fern/img/brand/lockup-light.webp" alt="June &amp; Fern" width="2960" height="1800">
       <div><h1>Studio</h1><p class="muted" style="margin:.3rem 0 0">Listings, orders and the small print.</p></div>
       <div class="field ${msg ? 'is-invalid' : ''}"><label for="pw">Password</label><input id="pw" class="input" type="password" autocomplete="current-password" autofocus required><div class="err">${esc(msg)}</div></div>
       <button class="s-btn" type="submit" style="justify-self:start">Open the studio ${icon('arrow')}</button>
@@ -48,7 +48,7 @@ function shell(content) {
   const open = S.orders.filter((o) => ['paid', 'packed'].includes(o.status)).length;
   app.innerHTML = `<div class="s-app">
     <aside class="s-rail">
-      <div><a class="brand" href="/june-and-fern/" title="View the shop"><img class="brand-img" src="/june-and-fern/img/brand/wordmark.png" alt="June &amp; Fern" width="720" height="112"></a><span class="tag">Studio</span></div>
+      <div><a class="brand" href="/june-and-fern/" title="View the shop"><img class="brand-img" src="/june-and-fern/img/brand/wordmark.webp" alt="June &amp; Fern" width="1440" height="224"></a><span class="tag">Studio</span></div>
       <nav class="s-nav">
         <a href="#listings" data-view="listings" ${S.view === 'listings' ? 'aria-current="page"' : ''}>${icon('image')} Listings</a>
         <a href="#orders" data-view="orders" ${S.view === 'orders' ? 'aria-current="page"' : ''}>${icon('box')} Orders ${open ? `<span class="n">${open}</span>` : ''}</a>

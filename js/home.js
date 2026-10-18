@@ -181,7 +181,7 @@ function setupHero() {
   document.body.classList.add('has-intro');
   const intro = document.createElement('div');
   intro.className = 'intro';
-  intro.innerHTML = `<div class="intro-svg">${printSVG({ viewBox: `0 0 ${W} ${H}`, plants: insideMarkup + plantMarkup(extras, 21), id: 'ip', soft, live: false })}</div><img class="intro-logo" src="/june-and-fern/img/brand/lockup-light.png" alt=""><button class="intro-skip" type="button">Skip</button>`;
+  intro.innerHTML = `<div class="intro-svg">${printSVG({ viewBox: `0 0 ${W} ${H}`, plants: insideMarkup + plantMarkup(extras, 21), id: 'ip', soft, live: false })}</div><img class="intro-logo" src="/june-and-fern/img/brand/lockup-light.webp" alt=""><button class="intro-skip" type="button">Skip</button>`;
   intro.prepend(canvas);
   document.body.append(intro);
   wash = makeWash(canvas);
