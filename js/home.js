@@ -287,7 +287,7 @@ function setupProcess() {
   stage.insertAdjacentHTML('afterbegin', `
   <svg viewBox="0 0 ${S} ${S}" class="process-svg" aria-hidden="true">
     <defs>
-      <filter id="pr-rough" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="14"/></filter>
+      <filter id="pr-rough" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="8"/></filter>
       <filter id="pr-soft"><feGaussianBlur stdDeviation="0.7"/></filter>
       <filter id="pr-shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="6" dy="10" stdDeviation="6" flood-color="#1F2622" flood-opacity="0.35"/></filter>
       <clipPath id="pr-sheet"><rect x="90" y="90" width="820" height="820"/></clipPath>

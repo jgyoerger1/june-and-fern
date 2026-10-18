@@ -22,7 +22,7 @@ const NAV = [
 
 function headerHTML() {
   return `<div class="header-inner">
-    <button class="nav-toggle" data-nav-open aria-label="Open menu">${icon('menu')}</button>
+    <button class="nav-toggle" data-nav-toggle aria-label="Menu" aria-expanded="false"><span class="hb"><i></i><i></i><i></i></span></button>
     <nav class="nav nav-left" aria-label="Primary">${NAV.slice(0, 4).map(([h, l]) => `<a href="${h}">${l}</a>`).join('')}</nav>
     <a class="brand" href="/june-and-fern/" aria-label="June and Fern, home"><img class="brand-img" src="/june-and-fern/img/brand/wordmark.png" alt="June &amp; Fern" width="720" height="112"></a>
     <nav class="nav nav-right" aria-label="Secondary">${NAV.slice(4).map(([h, l]) => `<a href="${h}">${l}</a>`).join('')}
@@ -34,7 +34,6 @@ function headerHTML() {
 function menuHTML() {
   const bigFern = fern(rng(9), { length: 300, pinnae: 20, width: 0.45, curl: 0.2 });
   return `<div class="menu" data-menu aria-hidden="true">
-    <div class="menu-top"><img class="brand-img" src="/june-and-fern/img/brand/wordmark.png" alt="June &amp; Fern" width="720" height="112"><button class="menu-close" data-nav-close aria-label="Close menu">${icon('close')}</button></div>
     <nav class="menu-links" aria-label="Menu">${NAV.map(([h, l], i) => `<a href="${h}" style="--i:${i}">${l}</a>`).join('')}</nav>
     <div class="menu-foot"><span>Northeast Ohio</span><span data-menu-ig>@juneandfern</span></div>
     <svg class="menu-fern" viewBox="-160 -320 320 330" aria-hidden="true"><path fill="currentColor" d="${bigFern}"/></svg>
@@ -87,12 +86,19 @@ function markCurrent() {
 
 function bindMenu() {
   const menu = document.querySelector('[data-menu]');
+  const setOpen = (open) => {
+    menu.classList.toggle('is-open', open);
+    menu.setAttribute('aria-hidden', String(!open));
+    document.body.classList.toggle('menu-open', open);
+    document.documentElement.classList.toggle('lenis-stopped', open);
+    document.querySelectorAll('[data-nav-toggle]').forEach((b) => b.setAttribute('aria-expanded', String(open)));
+  };
   document.addEventListener('click', (e) => {
-    if (e.target.closest('[data-nav-open]')) { menu.classList.add('is-open'); menu.setAttribute('aria-hidden', 'false'); document.documentElement.classList.add('lenis-stopped'); }
-    if (e.target.closest('[data-nav-close]') || (e.target.closest('.menu-links a'))) { menu.classList.remove('is-open'); menu.setAttribute('aria-hidden', 'true'); document.documentElement.classList.remove('lenis-stopped'); }
+    if (e.target.closest('[data-nav-toggle]')) setOpen(!menu.classList.contains('is-open'));
+    else if (e.target.closest('[data-nav-close]') || e.target.closest('.menu-links a')) setOpen(false);
   });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && menu.classList.contains('is-open')) setOpen(false); });
 }
-
 function bindSubscribe(root) {
   const form = root.querySelector('[data-subscribe]');
   form.addEventListener('submit', async (e) => {
